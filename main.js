@@ -23,4 +23,6 @@ var loadFont = async function(name) {
         font.load();
         document.fonts.add(font);
     });
+
+    await document.fonts.ready;
 };
