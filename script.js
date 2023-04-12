@@ -11,5 +11,5 @@ const ctx = canvas.getContext("2d");
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
 
-    ctx.fillText("Hello!", canvas.width / 2, canvas.height / 2);
+    ctx.fillText("Hello, world!", canvas.width / 2, canvas.height / 2);
 })();
