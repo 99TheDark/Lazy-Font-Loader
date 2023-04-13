@@ -3,13 +3,15 @@ const ctx = canvas.getContext("2d");
 
 [canvas.width, canvas.height] = [innerWidth, innerHeight];
 
-(async function() {
-    await loadFont("Ubuntu");
+let fontFamily = "Ubuntu";
 
-    ctx.font = "80px Ubuntu";
+(async function() {
+    await loadFont(fontFamily);
+
+    ctx.font = `80px ${fontFamily}`;
     ctx.fillStyle = "#000000";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
 
-    ctx.fillText("Hello, world!", canvas.width / 2, canvas.height / 2);
+    ctx.fillText("Hello!", canvas.width / 2, canvas.height / 2);
 })();
