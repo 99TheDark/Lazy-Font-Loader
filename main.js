@@ -1,9 +1,13 @@
 var loadFont = async function(name) {
+    let failed = false;
+
     let url = `https://fonts.googleapis.com/css2?family=${name.replace(/\s/g, "+")}`;
     let stylesheet = await fetch(url)
         .then(file => file.text())
-        .catch(error => console.error(error));
+        .catch(() => failed = true);
 
+    if(failed) return;
+    
     let fonturls = [];
     for(let i = 0; i < 100; i++) {
         let start = stylesheet.indexOf("url(");
