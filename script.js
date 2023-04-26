@@ -3,12 +3,12 @@ const ctx = canvas.getContext("2d");
 
 [canvas.width, canvas.height] = [innerWidth, innerHeight];
 
-let fontFamily = "Ubuntu";
+let fontFamily = "Teko";
 
-(async function() {
+(async () => {
     await loadFont(fontFamily);
 
-    ctx.font = `80px ${fontFamily}`;
+    ctx.font = `150px ${fontFamily}`;
     ctx.fillStyle = "#000000";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
